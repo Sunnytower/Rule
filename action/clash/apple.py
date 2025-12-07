@@ -10,7 +10,7 @@ for url in urls:
         if (item not in result) and (not item.startswith('#')):
             result.append(item)
 
-file_path = "./clash/appe.txt"
+file_path = "./clash/apple.txt"
 os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
 with open(file_path, "w") as f:
