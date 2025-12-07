@@ -1,9 +1,8 @@
 import requests
 urls = [
-"https://ruleset.skk.moe/List/non_ip/domestic.conf",
-"https://ruleset.skk.moe/List/non_ip/direct.conf",
+"https://ruleset.skk.moe/Clash/domainset/apple_cdn.txt",
 ]
-result = ["DOMAIN-SUFFIX,ctest.srv.nintendo.net"]
+result = []
 for url in urls:
     resource_text = requests.get(url).text
     for item in resource_text.split("\n"):
@@ -11,5 +10,5 @@ for url in urls:
             result.append(item)
 
 
-with open("./Surge/Direct.list", "w") as f:
+with open("./clash/apple_cdn.txt", "w") as f:
     f.write("\n".join(result))

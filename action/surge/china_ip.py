@@ -1,6 +1,7 @@
 import requests
 urls = [
-"https://ruleset.skk.moe/Clash/ip/china_ip.txt",
+"https://ruleset.skk.moe/List/ip/domestic.conf",
+"https://ruleset.skk.moe/List/ip/china_ip.conf",
 ]
 result = []
 for url in urls:
@@ -10,5 +11,5 @@ for url in urls:
             result.append(item)
 
 
-with open("./Clash/ChinaIP.txt", "w") as f:
+with open("./surge/china_ip.list", "w") as f:
     f.write("\n".join(result))

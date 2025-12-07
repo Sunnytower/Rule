@@ -1,6 +1,6 @@
 import requests
 urls = [
-"https://ruleset.skk.moe/Clash/domainset/apple_cdn.txt",
+"https://ruleset.skk.moe/List/domainset/apple_cdn.conf",
 ]
 result = []
 for url in urls:
@@ -10,5 +10,5 @@ for url in urls:
             result.append(item)
 
 
-with open("./Clash/AppleCDN.txt", "w") as f:
+with open("./surge/apple_cdn.list", "w") as f:
     f.write("\n".join(result))

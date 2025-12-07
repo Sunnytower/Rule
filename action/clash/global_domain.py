@@ -11,5 +11,5 @@ for url in urls:
             result.append(item)
 
 
-with open("./Clash/GlobalDomain.txt", "w") as f:
+with open("./clash/global_domain.txt", "w") as f:
     f.write("\n".join(result))
